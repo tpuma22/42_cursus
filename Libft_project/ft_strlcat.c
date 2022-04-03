@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 21:31:41 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/03 16:27:14 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/04/03 19:26:49 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,15 @@
 	or that dst is not a proper string). If the src and dst strings overlap,
 	the behavior is undefined.
 	PARAMETERS
-			1. A pointer to the destiny string in which to concatenate.
-			2. A pointer to the source string to concatenate.
-			3. The size of the destination buffer.
+		1. A pointer to the destiny string in which to concatenate.
+		2. A pointer to the source string to concatenate.
+		3. The size of the destination buffer.
 	RETURN VALUES
 	The strlcat() functions return the total length of the string they tried to
 	create, that means the initial length of dst plus the length of src.
 	 */
 
 #include "libft.h"
-#include<stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -50,8 +49,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while ((dst[i] != '\0') && (i < (dstsize - long_dst - 1)))
 	{
 		dst[long_dst + i] = src[i];
-		printf("Debug1: %c\n", dst[long_dst + i]);
-		printf("Debug2: %c\n", src[i]);
 		i++;
 	}
 	dst[long_dst + i] = '\0';
