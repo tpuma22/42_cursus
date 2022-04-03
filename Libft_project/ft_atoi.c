@@ -6,9 +6,11 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 18:22:12 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/01 20:44:38 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/04/03 16:25:46 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
@@ -38,6 +40,7 @@ int	ft_atoi(char *str)
 	total *= sign;
 	return (total);
 }
+
 /*
 #include <unistd.h>
 #include <stdlib.h>

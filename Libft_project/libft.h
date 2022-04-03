@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:00:39 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/02 15:40:12 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/04/03 10:48:23 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,13 @@ extern	int		ft_toupper(int c);
 extern	int		ft_tolower(int c);
 extern	void		*ft_memset(void *b, int c, size_t len);
 extern	size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+extern	size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 /*
 
 • bzero
 • memcpy
 • memmove
-• strlcpy
-• strlcat
 • strchr
 • strrchr
 • strncmp

@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 13:04:33 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/02 18:18:02 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/04/03 16:29:51 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ PARAMETERS
 		2. The source string to copy.
 		3. The final number of bytes copied.
 RETURN VALUES
-The strlcpy() return the total length of the string they tried to create, that means the length of src.
+The strlcpy() return the total length of the string they tried to create, that
+means the length of src.
 If the return value is >= dstsize, the output string has been truncated.
  */
 
@@ -52,3 +53,20 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (j);
 }
+
+/* int	main(void)
+{
+	size_t			l;
+	char	dest1[] = "";
+	char	source1[] = "POLOLO";
+	char	dest2[] = "";
+	char	source2[] = "POLOLO";
+
+	l = 2;
+	printf("%s | %s\n", dest1, source1);
+	printf("Mi función: %zu\n", ft_strlcpy(dest1, source1, l));
+	printf("%s | %s\n", dest1, source1);
+	printf("La original: %lu\n", strlcpy(dest2, source2, l));
+	printf("%s | %s\n", dest2, source2);
+	return (0);
+} */

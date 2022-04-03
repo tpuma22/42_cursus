@@ -6,9 +6,11 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 12:33:18 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/01 19:53:58 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/04/03 16:25:16 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -19,3 +21,14 @@ int	ft_isalpha(int c)
 	else
 		return (1);
 }
+
+/* int	main(void)
+{
+	int	resultado;
+	int	a;
+
+	a = 65;
+	resultado = ft_isalpha(a);
+	printf("%d", resultado);
+	return (0);
+} */
