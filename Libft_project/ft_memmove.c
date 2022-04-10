@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 19:13:32 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/03 19:35:07 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/04/10 14:30:40 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ PARAMETERS
 	1. The destiny pointer in which to write.
 	2. A pointer to the buffer to copy data from.
 	3. The number of bytes to copy.
-	<Since "void *" is not available to work, you have to convert it to another
-	data type>.
+<'void *' is normally used as a way to pass non-specific pointers. You have to
+convert it to another data type>.
+<The 'const void *' declares that the object pointed to is read-only,
+it is constant, and cannot be modified, so you have to cast it in order to work>
 RETURN VALUES
 The memmove() function returns the original value of dst. */
 
@@ -36,23 +38,36 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (!dst && !src)
 		return (0);
-	while (i < len)
+	if ((size_t)dst - (size_t)src < len)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
+		i = len - 1;
+		while (i < len)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i--;
+		}
 	}
-	return ((unsigned char *)dst);
+	else
+	{
+		while (i < len)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
+	}
+	return ((char *)dst);
 }
 
 /* int	main(void)
 {
 	size_t			len;
-	unsigned char	cad_dst[11] = "Hola mundo";
-	unsigned char	cad_src[6] = "AAAAA";
-	unsigned char	cad_dst2[11] = "Hola mundo";
-	unsigned char	cad_src2[6] = "AAAAA";
-
-	len = 20;
+	unsigned char	*cad_dst;
+	unsigned char	cad_src[] = "lorem ipsum dolor sit amet";
+	unsigned char	*cad_dst2;
+	unsigned char	cad_src2[] = "lorem ipsum dolor sit amet";
+	cad_dst = cad_src + 1;
+	cad_dst2 = cad_src2 + 1;
+	len = 8;
 	printf("variables: %s | %s\n", cad_dst, cad_src);
 	printf("Mi función: %s\n", ft_memmove(cad_dst, cad_src, len));
 	printf("La original: %s\n", memmove(cad_dst2, cad_src2, len));

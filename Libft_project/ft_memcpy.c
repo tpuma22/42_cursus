@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 18:38:54 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/03 19:35:32 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/04/10 18:04:51 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ PARAMETERS
 	1. The destiny pointer in which to write.
 	2. The source string to copy data from.
 	3. The number of bytes to copy.
-	<Since "void *" is not available to work, you have to convert it to another
-	data type>.
+<'void*' is normally used as a way to pass non-specific pointers. You have to
+convert it to another data type>.
+<The 'const void *' declares that the object pointed to is read-only,
+it is constant, and cannot be modified, so you have to cast it in order to work>
 RETURN VALUES
 The memcpy() function returns the original value of dst. */
 
@@ -34,8 +36,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!dst && !src)
-		return (0);
 	while (i < n)
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
