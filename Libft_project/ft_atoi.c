@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 18:22:12 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/10 19:20:12 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/05/07 12:01:46 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int	ft_atoi(const char *str)
 	i = 0;
 	total = 0;
 	sign = 1;
-	if (!str)
-		return (0);
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
 		|| str[i] == '\r' || str[i] == '\f' || str[i] == '\v')
 		i++;

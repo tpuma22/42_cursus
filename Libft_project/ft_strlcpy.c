@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 13:04:33 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/10 14:31:59 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/05/07 11:21:32 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
-	if (!dst || !src)
-		return (0);
 	while (src[j] != '\0')
 		j++;
-	if (dst[i] == 0)
-		return (j);
-	if (dstsize != 0)
+	if (dstsize > 0)
 	{
-		while ((src[i] != '\0') && (i < dstsize - 1))
+		while ((src[i] != '\0') && i < (dstsize - 1))
 		{
 			dst[i] = src[i];
 			i++;

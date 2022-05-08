@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 16:46:25 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/03 18:32:24 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/05/06 21:52:43 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ RETURN VALUES
 - */
 
 #include "libft.h"
-#include<stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {

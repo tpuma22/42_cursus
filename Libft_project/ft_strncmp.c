@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 22:32:54 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/10 18:46:09 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/05/07 11:36:26 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n)
+	while ((((unsigned char *)s1)[i] != '\0'
+		|| ((unsigned char *)s2)[i] != '\0') && i < n)
 	{
 		if ((unsigned char)s1[i] != (unsigned char)s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);

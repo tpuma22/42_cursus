@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 20:11:01 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/10 14:31:05 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/05/07 16:26:42 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
-
-/* int	main(void)
+/*
+int	main(void)
 {
 	char	c;
 	char	dest1[] = "hola";
@@ -51,4 +51,5 @@ char	*ft_strchr(const char *s, int c)
 	printf("las variables son: %s | %s\n", dest1, dest2);
 	printf("Mi función: %s\n", ft_strchr(dest1, c));
 	printf("La original: %s\n", strchr(dest2, c));
-} */
+}
+ */

@@ -6,7 +6,7 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 18:38:54 by tpuma             #+#    #+#             */
-/*   Updated: 2022/04/10 18:04:51 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/05/06 22:09:57 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!dst && !src)
+		return (NULL);
 	while (i < n)
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
