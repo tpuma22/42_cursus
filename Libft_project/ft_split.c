@@ -6,13 +6,13 @@
 /*   By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 18:30:52 by tpuma             #+#    #+#             */
-/*   Updated: 2022/05/08 18:38:13 by tpuma            ###   ########.fr       */
+/*   Updated: 2022/05/20 19:39:14 by tpuma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* PROTOTIPO
 char **ft_split(char const *s, char c);
-PaARÁMETROS
+PARÁMETROS
 	s: La string a separar.
 	c: El carácter delimitador.
 VALOR DEVUELTO

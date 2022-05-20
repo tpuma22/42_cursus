@@ -6,7 +6,7 @@
 #    By: tpuma <tpuma@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 21:23:17 by tpuma             #+#    #+#              #
-#    Updated: 2022/05/08 18:30:43 by tpuma            ###   ########.fr        #
+#    Updated: 2022/05/20 20:42:48 by tpuma            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,15 +47,21 @@ SRC =	ft_isalpha.c		\
 		ft_putendl_fd.c		\
 		ft_putnbr_fd.c		\
 
-
-
-
-
+SRC_BONUS =	ft_lstnew_bonus.c			\
+			ft_lstadd_front_bonus.c		\
+			ft_lstsize_bonus.c			\
+			ft_lstlast_bonus.c			\
+			ft_lstadd_back_bonus.c		\
+			ft_lstdelone_bonus.c		\
+			ft_lstclear_bonus.c			\
+			ft_lstiter_bonus.c			\
+			ft_lstmap_bonus.c			\
 
 INCLUDES = libft.h
 
-#OBJ_BONUS = $(SRC_BONUS:.c=.o)
 OBJ = $(SRC:.c=.o)
+
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 CC = gcc
 AR = ar rc
@@ -64,20 +70,21 @@ RM = /bin/rm -f
 
 all: $(NAME)
 
-
 $(NAME) : $(OBJ) $(INCLUDES)
-	$(AR) $(NAME) $(OBJ)
+	$(AR) $(NAME) $(OBJ) $(OBJ_BONUS)
 
 %.o : %.c
+	$(CC) $(CFLAGS) -c $(SRC) $(SRC_BONUS)
 
-	$(CC) $(CFLAGS) -c $(SRC)
+bonus: $(OBJ) $(OBJ_BONUS) $(INCLUDES)
+	$(AR) $(NAME) $(OBJ) $(OBJ_BONUS)
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
